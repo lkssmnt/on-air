@@ -1,0 +1,162 @@
+@font-face {
+  font-family: "SnellBT";
+  src: url(/fonts/SnellBT-Bold.woff);
+}
+
+@font-face {
+  font-family: "HelveticaNeueLight";
+  src: url(/fonts/HelveticaNeueLight.woff2);
+}
+
+html {
+  font-size: 2vw;
+}
+
+body {
+  margin: 0;
+  background-color: rgb(50, 103, 182);
+  color: #fff;
+  font-family: Helvetica, Arial, sans-serif;
+  overflow: hidden; /* disable scrolling / rubberband effect on mobile */
+}
+
+canvas {
+  display: block;
+  position: fixed;
+  outline: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  pointer-events: none;
+}
+
+.content-wrapper {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  background-color: red;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+* {
+  /* disable on touch highlights of html elements, especially on mobile! */
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  box-sizing: border-box;
+  width: 100vw;
+  padding: 20px;
+  text-align: right;
+  font-size: 18px;
+  color: var(--highlight-color);
+}
+
+p {
+  color: red;
+}
+
+.videoWrapper {
+  position: relative;
+  /* top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0; */
+  padding-bottom: 56.25%;
+  /* 16:9 */
+  padding-top: 25px;
+}
+
+.videoWrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.overlay-wrapper {
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+p,
+a,
+li {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: geometricPrecision;
+}
+
+h1 {
+  font-family: SnellBT;
+}
+
+p {
+  font-family: HelveticaNeueLight;
+}
+
+p > span {
+  font-family: SnellBT;
+}
+
+.heading-main-1,
+.heading-main-2 {
+  position: absolute;
+  left: 50%;
+  font-size: 8rem;
+  text-align: center;
+  margin: 0;
+  text-shadow: 0 0 2rem rgba(255, 255, 255, 1);
+  width: max-content;
+  margin: 0 auto;
+}
+
+.heading-main-1 {
+  transform: translateX(-70%);
+}
+
+.heading-main-2 {
+  transform: translateY(20%);
+}
+
+.credits {
+  position: absolute;
+  text-align: center;
+  bottom: 0;
+  left: 0;
+  margin: 0;
+  padding: 0.5rem;
+  color: white;
+  line-height: 1.1;
+}
+
+.shape {
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  width: 10rem;
+  height: 3rem;
+  border-radius: 2rem;
+  object-fit: cover;
+  /* box-shadow: inset 0.3rem 0.3rem 0.9em white; */
+}
