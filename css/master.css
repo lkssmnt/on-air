@@ -64,7 +64,7 @@ body {
   border-radius: 400px;
   padding: 2px;
   box-shadow: 4px 2px 16px rgba(136, 165, 191, 0.48), -4px -2px 16px #ffffff;
-  cursor: pointer;
+  /* cursor: pointer; */
   -webkit-tap-highlight-color: transparent;
 }
 

@@ -3,7 +3,8 @@
    <head>
       <meta charset="utf-8">
       <title>On Air</title>
-         <link rel="stylesheet" href="master.css">
+         <link rel="stylesheet" href="/css/master.css">
+         <link rel="stylesheet" href="/css/style.css">
          <script src="script.js"></script>
          <link href="https://fonts.googleapis.com/css?family=Material+Icons+Round" rel="stylesheet">
    </head>
@@ -36,8 +37,32 @@
         <h1>ON AIR</h1>
 
         <video autoplay muted loop id="myVideo">
-        <source src="clouds.mp4" type="video/mp4">
+        <source src="/assets/clouds.mp4" type="video/mp4">
         </video>
+
+
+        <script src="/socket.io/socket.io.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <!-- <script src="https://cdn.socket.io/socket.io-1.0.0.js"></script> -->
+        <script src="/client.js" charset="utf-8"></script>
+        <!-- <script type="text/javascript">
+          var socket = io();
+
+          $(document).on('mousemove', function(){
+            socket.emit('mouse move', {x: event.pageX, y: event.pageY});
+          });
+
+          socket.on('updateCursorPos', function(data){
+            if($('.pointer[session_id="' + data.session_id + '"]').length <= 0){
+              $('body').append('<div class="pointer" session_id="' +  data.session_id + '"></div>')
+            }
+
+            var $pointer = $('.pointer[session_id="' + data.session_id + '"]');
+
+            $pointer.css('left', data.coords.x);
+            $pointer.css('top', data.coords.y);
+          });
+        </script> -->
 
     </body>
 

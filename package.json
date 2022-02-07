@@ -1,0 +1,15 @@
+{
+  "name": "show-cursors",
+  "version": "0.0.1",
+  "description": "show all cursors of users connects",
+  "dependencies": {
+    "express": "^4.17.2",
+    "socket.io": "^4.1.2"
+  },
+  "engines": {
+    "node": "12.17.x"
+  },
+  "scripts": {
+    "start": "node index.js"
+  }
+}
