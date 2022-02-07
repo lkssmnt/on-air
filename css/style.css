@@ -163,6 +163,7 @@ p > span {
 }
 
 .pointer{
+  pointer-events: none;
   position: absolute;
   /* background:white; */
   /* background-image: url('./assets/arrow.png'); */
